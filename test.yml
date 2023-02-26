@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  gathet_facts: yes
+
+  tasks:
+  - name: print 
+    debug:
+      msg: |
+        hostname: '{{ ansible_hostname }}'
+        OS: '{{ ansible_distribution }}'
+        version: '{{ ansible_major_version }}'
+        
