@@ -14,4 +14,8 @@
     debug:
       msg: |
         user: '{{ my_user }}'
-        password: '{{ my_password }}'      
+        password: '{{ my_password }}'    
+
+  - name: print all extra vars
+    debug:
+      msg: '{{ hostvars[inventory_hostname] }}'  
