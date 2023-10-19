@@ -10,11 +10,11 @@
         hostname: '{{ ansible_hostname }}'
         OS: '{{ ansible_distribution }}'
   
-  - name: print user and pass
-    debug:
-      msg: |
-        user: '{{ my_user }}'
-        password: '{{ my_password }}'    
+  #- name: print user and pass
+  # debug:
+  #    msg: |
+  #      user: '{{ my_user }}'
+  #      password: '{{ my_password }}'    
 
   - name: print all extra vars
     debug:
