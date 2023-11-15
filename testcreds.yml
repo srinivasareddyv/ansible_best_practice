@@ -10,10 +10,10 @@
 
   - name: print again
     debug:
-      var: ansible_env
+      var: hostvars['localhost']
 
   - name: print username and pass
     debug:
       msg: |
         '{{ http_basic_password }} = {{ http_basic_username }}'
-        '{{ username }} - {{ password }}'
+        
