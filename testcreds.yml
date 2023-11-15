@@ -1,0 +1,17 @@
+---
+
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: print local env
+    debug:
+      msg: '{{ ansible_env }}'
+
+  - name: print again
+    debug:
+      var: ansible_env
+
+  - name: print username and pass
+    debug:
+      msg: '{{ http_basic_password }} = {{ http_basic_username }}'
